@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarklets</title>
+  <link id="favicon" rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAD//wD///8A//8AAP//AAD//wAA/wAA//8AAP///wD///8A////AP///wD//////wD///8A////AP///wD///8A//8A////AP//AAD//wAA//8AAP8AAP//AAD//wAAAP8AAAD/AAAA//8A////AP///wD//////wD///8A////AP//AP///wD//wAA//8AAP//AAD/AAD//wAA//8AAAD/AAAA/wAAAP8AAAD/AAAA//8A////AP///wD//////wD//wD///8A//8AAP//AAD//wAA/wAA//8AAP//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD//wD///8A////AP////8A////AP//AAD//wAA//8AAP8AAP//AAD//wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP//AP///wD/////AP///wD//wAA//8AAP//AAD/AAD//wAA//8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP//AP///wD//////wD//wD///8A//8AAP//AAD//wAA/wAA//8AAP//AAAA/wAAAP8AAAD/AAAA/wAAAP//AP///wD//////wD///8A//8A////AP//AAD//wAA//8AAP8AAP//AAD///8A////AP///wD///8A////AP///wD///8A//////8A////AP//AP///wD//wAA//8AAP//AAD/AAD//wAA////AP///wD///8A////AP///wD///8A//////8A////AP///wD//wD///8A//8AAP//AAD//wAA/wAA//8AAP//AP///wD///8A////AP///wD///////8A////AP///wD///8A//8A////AP//AAD//wAA//8AAP8AAP//AAD//wD///8A////AP///wD///8A////AP///wD///8A////////AP//AP///wD//wAA//8AAP//AAD/AAD//wAA//8AAAD/AAAA/wAAAP8AAAD/AAAA/wD///8A////AP///wD//////wD///8A//8AAP//AAD//wAA/wAA//8AAP//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AP///wD///8A//////8A////AP//AAD//wAA//8AAP8AAP//AAD//wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wD///8A////AP//////AP///wD//wAA//8AAP//AAD/AAD//wAA//8AAAD/AAAA/wAAAP8AAAD/AP///wD///8A////AP///wD//////wD///8A//8AAP//AAD//wAA/wAA//8AAP//AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" type="image/x-icon">
+<link href="bundle.css" rel="stylesheet"></head>
+<body>
+  <h1>Bookmarklets</h1>
+  <p>✨ A collection of <a href="https://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> for you.</p>
+  <p>❤️ Please help to complement this collection with your brilliant mind. <a href="https://github.com/chafel/bookmarklets">Open repository</a></p>
+
+  <ul>
+    <li>
+      <a href="javascript:(function()%7Bvar s%3Ddocument.createElement('script')%3Bs.setAttribute('src'%2C'https%3A%2F%2Fcode.jquery.com%2Fjquery.js')%3Bdocument.getElementsByTagName('body')%5B0%5D.appendChild(s)%7D)()">
+        inject JQuery
+      </a>
+    </li>
+    <li>
+      <a href="javascript:(function()%7B(function() %7Bvar iframe %3D document.createElement('iframe')%3Biframe.onload %3D function() %7Bvar iframeKeys %3D Object.keys(iframe.contentWindow)%3BObject.keys(window).forEach(function(key) %7Bif(!(key in iframeKeys)) %7Bconsole.log(key)%3B%7D%7D)%3B%7D%3Biframe.src %3D 'about%3Ablank'%3Bdocument.body.appendChild(iframe)%3B%7D)()%7D)()">
+        log all keys in Window
+      </a>
+    </li>
+    <li>
+      <a href="javascript:(function()%7B(function() %7Bvar iframe %3D document.createElement('iframe')%3Biframe.onload %3D function() %7Bvar iframeKeys %3D Object.keys(iframe.contentWindow)%3BObject.keys(window).forEach(function(key) %7Bif(!~iframeKeys.indexOf(key)) %7Bconsole.log(key)%3B%7D%7D)%3B%7D%3Biframe.src %3D 'about%3Ablank'%3Bdocument.body.appendChild(iframe)%3B%7D)()%7D)()">
+        log all global variables
+      </a>
+    </li>
+    <li>
+      <a href="javascript:(function()%7Bvar s%3Ddocument.createElement('script')%3Bs.setAttribute('src'%2C'https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Flodash.js%2F4.17.4%2Flodash.min.js')%3Bdocument.getElementsByTagName('body')%5B0%5D.appendChild(s)%7D)()">
+        inject lodash
+      </a>
+    </li>
+  </ul>
+
+  <p>
+    Make bookmarklet your with <a href="https://mrcoles.com/bookmarklet/">this tool</a>.
+  </p>
+<script type="text/javascript" src="bundle.7b26cb335c5a8c7f6b9a.js"></script></body>
+</html>
