@@ -31,6 +31,11 @@
         inject lodash
       </a>
     </li>
+    <li>
+      <a href="javascript:(function()%7Bconst%20urlParams%20%3D%20new%20URLSearchParams(location.search)%3Bconst%20entries%20%3D%20urlParams.entries()%3Blet%20query%20%3D%20%7B%7D%3Bfor(const%20entry%20of%20entries)%20%7Bconsole.log(%60%24%7Bentry%5B0%5D%7D%3A%20%24%7Bentry%5B1%5D%7D%60)%3Bquery%5Bentry%5B0%5D%5D%20%3D%20entry%5B1%5D%7Dconsole.log(query)%7D)()">
+        show query string
+      </a>
+    </li>
   </ul>
 
   <p>
