@@ -5,6 +5,7 @@ const Webpack = require('webpack');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
+var ghpages = require('gh-pages');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -21,7 +22,18 @@ module.exports = merge(common, {
     new Webpack.optimize.ModuleConcatenationPlugin(),
     new MiniCssExtractPlugin({
       filename: 'bundle.css'
-    })
+    }),
+    {
+      apply: (compiler) => {
+        compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
+            ghpages.publish('dist', function(err) {
+              process.stderr.write(err);
+            });
+
+            process.stdout.write('published');
+        });
+      }
+    }
   ],
   resolve: {
     alias: {
