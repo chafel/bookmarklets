@@ -55,7 +55,6 @@
     "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
     "webpack": "^4.17.1",
